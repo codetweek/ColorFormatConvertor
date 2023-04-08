@@ -138,7 +138,7 @@ $(document).ready(function () {
 
         $(':root').css(rootVar, val);
 
-        console.log(state);
+        //console.log(state);
         changeColors();
 
     });
@@ -161,11 +161,11 @@ $(document).ready(function () {
         l = $(':root').css('--lig');
         if (state === 0) {
             c0 = 'rgba(' + r + ', ' + g + ', ' + b + ', 1.0)';
-            console.log(c0);
-            console.log("called");
+            // console.log(c0);
+            // console.log("called");
 
             let lm = ((0.2126 * r) + (0.7152 * g) + (0.0722 * b));
-            console.log("lm=" + lm);
+            //console.log("lm=" + lm);
             if (lm <= 60) {
                 makeTheme('white');
 
@@ -180,8 +180,8 @@ $(document).ready(function () {
 
         } else {
             c1 = 'hsl(' + h + ', ' + s + '%, ' + l + '%)';
-            console.log(c1);
-            console.log("called2");
+            // console.log(c1);
+            // console.log("called2");
             if (l <= 50) {
 
                 //$('body').css('color', 'white');
@@ -340,7 +340,7 @@ $(document).ready(function () {
 
     function makeTheme(color) {
         invert = color === 'white' ? 'black' : 'white';
-        console.log(invert);
+        //console.log(invert);
 
         $(':root').css('--font-col', color);
         $(':root').css('--tab-col', 'transparent');
@@ -349,7 +349,7 @@ $(document).ready(function () {
     }
 
     function changeState(some) {
-        console.log("New Active selected - " + some);
+        //console.log("New Active selected - " + some);
         if (some == "0") {
             state = 0;
             //RGB is active
